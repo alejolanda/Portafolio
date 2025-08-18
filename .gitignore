@@ -1,5 +1,8 @@
+*.exe
 *.zip
 android-studio*
 paneles*
 *.iso
 *.rar
+*.tmp
+node_modules/
