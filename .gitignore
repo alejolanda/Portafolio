@@ -6,3 +6,4 @@ paneles*
 *.rar
 *.tmp
 node_modules/
+*.zip
