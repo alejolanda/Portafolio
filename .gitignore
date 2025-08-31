@@ -1,0 +1,10 @@
+*.exe
+*.zip
+android-studio*
+paneles*
+*.iso
+*.rar
+*.tmp
+node_modules/
+*.zip
+D:\workspace\Alura One\Portafolio\challenge-amigo-secreto_esp-main - copia*
