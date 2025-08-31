@@ -8,3 +8,8 @@ paneles*
 node_modules/
 *.zip
 challenge-amigo-secreto_esp-main - copia/
+# Directorios de proyectos que no deben subirse
+challenge-amigo-secreto_esp-main/
+js-curso-2-main/
+ProyectoNumeroSecreto/
+Sistema-de-registro/
