@@ -1,0 +1,90 @@
+:root { /* Variables CSS */
+    --primary-color: #000000;
+    --secondary-color: #f6f6f6;
+    --terciario-color: #22D4FD;
+    --hover-color: #272727;
+    --font-family-primary: 'Montserrat', sans-serif;
+    --font-family-secondary: 'Krona One', sans-serif;
+}
+
+/* Estilos para impresión */
+@media print {
+    .header, .footer, .acciones-cv, .download-btn {
+        display: none !important;
+    }
+    
+    body, .cv-moderno, .cv-header, .cv-header h1, 
+    .experiencia-titulo, .formacion-titulo, 
+    .experiencia-item li, .formacion-item li,
+    .cv-contacto p, .cv-seccion, .cv-seccion p {
+        background-color: var(--secondary-color) !important;
+        color: var(--primary-color) !important;
+    }
+    
+    .cv-moderno {
+        padding: 20px !important;
+        color: var(--primary-color) !important;
+        margin: 0 !important;
+    }
+    
+    .cv-header h2, .experiencia-empresa, .formacion-institucion,
+    .cv-seccion h3, .habilidad-categoria h4 {
+        color: var(--terciario-color) !important;
+        background-color: var(--secondary-color) !important;
+    }
+    
+    .habilidad-tag {
+        background: var(--secondary-color) !important;
+        color: var(--primary-color) !important;
+        border: 1px solid var(--secondary-color) !important;
+    }
+    
+    .experiencia-item, .formacion-item {
+        border-left: 3px solid var(--terciario-color) !important;
+        background-color: var(--secondary-color) !important;
+    }
+    
+    .cv-header, .cv-seccion h3 {
+        border-bottom: 1px solid var(--terciario-color) !important;
+        background-color: var(--secondary-color) !important;
+    }
+    
+    a {
+        text-decoration: none !important;
+        color: var(--primary-color) !important;
+    }
+    
+    /* Asegurar que no se corten elementos entre páginas */
+    .experiencia-item, .formacion-item {
+        page-break-inside: avoid;
+    }
+    
+    /* Optimizar para papel A4 */
+    @page {
+        margin: 1cm;
+    }
+    
+    body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+    }
+    
+    .cv-header h1 {
+        font-size: 24pt !important;
+    }
+    
+    .cv-header h2 {
+        font-size: 18pt !important;
+    }
+    
+    .cv-seccion h3 {
+        font-size: 16pt !important;
+    }
+    
+    .cv-seccion p, .experiencia-item li, .formacion-item li {
+        font-size: 11pt !important;
+    }
+}

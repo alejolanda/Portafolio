@@ -1,0 +1,302 @@
+/* Tamaño de caja CSS. El CSS box-sizing La propiedad nos permite 
+incluir el relleno y el borde en ancho y alto total de un elemento.
+
+Sin la propiedad CSS box-sizing
+De forma predeterminada, el ancho y la altura de un elemento se 
+calculan de la siguiente manera:
+
+ancho + relleno + borde = ancho real de un elemento
+altura + relleno + borde = altura real de un elemento
+
+Esto significa: cuando se establece el ancho/alto de un elemento, 
+el elemento aparece a menudo más grande de lo que ha configurado 
+(porque el borde y el relleno del elemento se agregan al ancho/alto 
+especificado del elemento).
+
+Con la propiedad CSS box-sizing
+El box-sizing La propiedad nos permite incluir el relleno y el borde 
+en ancho y alto total de un elemento.
+
+Si configuras box-sizing: border-box; En un elemento, el relleno y el 
+borde son incluido en el ancho y alto.
+
+¿Qué es el Viewport?
+En informática gráfica, el viewport es la porción del área visible de 
+un plano y se utiliza como unidad de medida en CSS para crear páginas 
+web 100% responsivas. En otras palabras, el viewport varía de dispositivo 
+a dispositivo, por ejemplo, en computadoras, tabletas y teléfonos móviles, 
+cada pantalla tiene dimensiones diferentes y mientras una página no responsiva 
+presentaría elementos desproporcionados, una página responsiva utilizando 
+viewport tendría sus elementos adecuados a cada proporción.
+
+Si has mostrado interés en el tema y quieres profundizar más, te recomendamos 
+que leas el artículo Guía de Unidades en CSS. A través de él, no solo conocerás 
+el Viewport, sino también otras unidades y conceptos muy utilizados en el 
+día a día del desarrollo Front-end.
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root { /* Variables CSS */
+    --primary-color: #000000;
+    --secondary-color: #f6f6f6;
+    --terciario-color: #22D4FD;
+    --hover-color: #272727;
+    --font-family-primary: 'Montserrat', sans-serif;
+    --font-family-secondary: 'Krona One', sans-serif;
+}
+
+* { /* Reset CSS o conf de arrastre*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: var(--secondary-color); 
+    text-align: justify;  
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}  
+
+.header__menu__link {
+    font-family: var(--font-family-primary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--terciario-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header__menu__link:hover {
+    color: var(--secondary-color);
+}
+
+.presentacion {
+    padding: 6% 15%;
+    display: flex;
+    text-align: justify;  
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__enlace__subtitulo {
+    font-family: var(--font-family-secondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.presentacion__contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2.25rem;
+    font-family: var(--font-family-secondary);
+    line-height: 1.3;
+}
+
+.titulo-destaco {
+    color: var(--terciario-color);
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.5rem;
+    font-family: var(--font-family-primary);
+    line-height: 1.5;
+}
+
+.presentacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__link {
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0px;
+    border-radius: 8px;
+    font-family: var(--font-family-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border: 2px solid var(--terciario-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(34, 212, 253, 0.3);
+}
+
+.presentacion__imagen {
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid var(--terciario-color);
+}
+
+.profile-image {
+    max-width: 450px;
+    border-radius: 10px;
+    border: 2px solid var(--terciario-color);
+}
+
+.footer {
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1.5rem 0px;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer:hover {
+    color: #F54927;
+    transition: color 0.3s ease;
+}
+
+.www {
+    color: #22D4FD;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.www:hover {
+    color: yellow;
+}
+
+/* Botón de descarga flotante */
+.download-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .header {
+        padding: 10%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        padding: 5% 10%;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .presentacion__contenido {
+        width:auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .presentacion {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .presentacion__contenido {
+        width:auto;
+    }
+    
+    .header__menu {
+        gap: 40px;
+        justify-content: center;
+    }
+    
+    .header {
+        padding: 5% 0%;
+    }
+    
+    .profile-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .presentacion__enlaces__link {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .header__menu {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .presentacion__contenido__titulo {
+        font-size: 28px;
+    }
+    
+    .presentacion__contenido__texto {
+        font-size: 18px;
+    }
+    
+    .footer {
+        font-size: 18px;
+        position: relative;
+    }
+    
+    body {
+        padding-bottom: 0;
+    }
+    
+    .download-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+    }
+}
+     
